@@ -4,7 +4,7 @@ A simple c++ code for observer pattern. The sample come from a classical book ab
 
 ## The Weather Station
 
-We still use the weather station example (which was introduced in book [Head First Design Patterns](https://www.oreilly.com/library/view/head-first-design/9781492077992/)) for implementing our own c++ observer pattern. 
+We still use the weather station example (which was introduced in book [Head First Design Patterns](https://www.oreilly.com/library/view/head-first-design/9781492077992/)) for implementing our own c++ observer pattern. For simplicity, I just implement the current condition display class, for other classes like statistical display, forecast display, it depends on your need. 
 
 ## How to use
 ```
