@@ -11,10 +11,10 @@ namespace ObserverPattern {
 
 class CurrentCondDisplay : public Observer, public DisplayElement {
 public:
-    CurrentCondDisplay(const std::string name, WeatherData *wd) {
+    CurrentCondDisplay(const std::string name, Subject *sub) {
         this->name = name;
-        wd_ = wd;
-        wd_->registerObserver(this);
+        sub_ = sub;
+        sub_->registerObserver(this);
     }
 
     CurrentCondDisplay(const std::string name) {
@@ -23,7 +23,7 @@ public:
 
     void update(float temp, float humidity, float pressure) override;
     void display() override;
-    void selfRegister(WeatherData *wd);
+    void selfRegister(Subject *sub);
     void unRegister();
 
 private:
@@ -31,7 +31,7 @@ private:
     float humidity;
     float pressure;
 
-    WeatherData *wd_;
+    Subject *sub_;
     std::string name;
 
 };
@@ -49,12 +49,12 @@ void CurrentCondDisplay::display() {
 }
 
 void CurrentCondDisplay::unRegister() {
-    wd_->removeObserver(this);
+    sub_->removeObserver(this);
 }
 
-void CurrentCondDisplay::selfRegister(WeatherData *wd) {
-    wd_ = wd;
-    wd_->registerObserver(this);
+void CurrentCondDisplay::selfRegister(Subject *sub) {
+    sub_ = sub;
+    sub_->registerObserver(this);
 }
 
 } //namespace ObserverPattern

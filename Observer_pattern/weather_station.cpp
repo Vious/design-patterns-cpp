@@ -3,6 +3,7 @@
 #include <string>
 #include "weather_data.h"
 #include "cur_cond_display.h"
+#include "stat_display.h"
 
 int main() 
 {
@@ -34,6 +35,11 @@ int main()
 
     std::cout << "A1 unregistered itself...\n";
     obs1.unRegister();
+    weatherStation->setMeasurements(23.5, 82.0, 44.5);
+
+    ObserverPattern::StatDisplay("Avg:", weatherStation);
+    weatherStation->setMeasurements(20.5, 79.0, 50.0);
+    
     weatherStation->setMeasurements(23.5, 82.0, 44.5);
 
 
