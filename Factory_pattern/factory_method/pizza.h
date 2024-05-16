@@ -26,7 +26,7 @@ public:
         std::cout << "Bake for 25 mins at 350.\n";
     }
 
-    void cut() {
+    virtual void cut() {
         std::cout << "Cutting the pizza into diagonal slices.\n";
     }
 

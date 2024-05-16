@@ -9,11 +9,11 @@ using namespace pizzastore;
 
 int main() 
 {
-    NYPizzaStore nyStore;
-    Pizza pizza1 = nyStore.orderPizza(flavor_type::cheese);
+    PizzaStore *nyStore = new NYPizzaStore();
+    Pizza pizza1 = nyStore->orderPizza(flavor_type::cheese);
 
-    ChicagoPizzaStore chiStore;
-    Pizza pizza2 = chiStore.orderPizza(flavor_type::cheese);
+    PizzaStore *chiStore = new ChicagoPizzaStore();
+    Pizza pizza2 = chiStore->orderPizza(flavor_type::cheese);
 
 
     return 0;

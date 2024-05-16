@@ -13,7 +13,7 @@ public:
         toppings.emplace_back("Shredded Mozzarella Cheese");
     }
 
-    void cut() {
+    void cut() override {
         std::cout << "Cutting the pizza into square slices.\n"; 
     }
 
