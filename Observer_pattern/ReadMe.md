@@ -36,3 +36,4 @@ Observer B1 current condition: 21.5 F degress and 80 % humidity, 47 pressure
 Observer C1 current condition: 21.5 F degress and 80 % humidity, 47 pressure
 ```
 
+You may find polymorphism there.
