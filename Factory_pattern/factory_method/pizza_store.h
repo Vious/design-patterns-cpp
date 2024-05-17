@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <memory>
 #include "pizza.h"
 
 namespace pizzastore {
@@ -10,22 +11,21 @@ enum flavor_type{cheese, pepp, clam, veggie};
 
 class PizzaStore{
 public:
-    Pizza orderPizza(flavor_type type) {
-        Pizza pizza;
+    std::shared_ptr<Pizza> orderPizza(flavor_type type) {
         
-        pizza = createPizza(type);
+        std::shared_ptr<Pizza> pizza = createPizza(type);
 
-        pizza.prepare();
-        pizza.bake();
-        pizza.cut();
-        pizza.box();
+        pizza->prepare();
+        pizza->bake();
+        pizza->cut();
+        pizza->box();
 
         return pizza;
     }
 
 protected:
     
-    virtual Pizza createPizza(flavor_type type) = 0;
+    virtual std::shared_ptr<Pizza> createPizza(flavor_type type) = 0;
 
 };
 

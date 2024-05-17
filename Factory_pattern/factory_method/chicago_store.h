@@ -7,9 +7,9 @@ namespace pizzastore {
 
 class ChicagoPizzaStore: public PizzaStore{
     
-    Pizza createPizza(flavor_type type) override {
+    std::shared_ptr<Pizza> createPizza(flavor_type type) override {
         if (type == flavor_type::cheese) {
-            return ChicagoStyleCheesePizza();
+            return std::make_shared<ChicagoStyleCheesePizza>();
         } // else if (),  for simplity, I just give one example
     }
 
