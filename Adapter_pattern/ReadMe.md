@@ -7,7 +7,9 @@ These two patterns do share something in common, for example, they both wrap cla
 ## The Differences
 An adapter is suitable for:
 - We have a class that its interface does not fit the need of our program, so we use adapter to change its interface.
-- Also, there are two types of adapter: object and class adapters. Class adapter requires multiple inheritance.  
+- Also, there are two types of adapter: object and class adapters. Class adapter requires multiple inheritance.
+
+One may find that decorator pattern also wraps classes, but the main difference is that decorator pattern is about to add new behaviors by wrapping new classes.   
 
 A facade:
 - Can be used to unify a set of interfaces, it decouples the client from knowing too much details of the complex subsystem (or detailed implementation of sub-classes). 
