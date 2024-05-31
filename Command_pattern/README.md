@@ -1,2 +1,2 @@
 # Command Pattern
-Simple c++ code for command pattern. (Remote control)
+Simple c++ code for command pattern. (Case: Remote control)
