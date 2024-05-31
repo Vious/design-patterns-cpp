@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <memory>
 
 namespace itp
 {
@@ -29,5 +30,7 @@ private:
     float price_;
 
 };
+
+using MenuItemPtr = std::shared_ptr<MenuItem>;
 
 } // namespace itp
