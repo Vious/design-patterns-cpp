@@ -22,7 +22,7 @@ public:
     }
 
     void dispense() override {
-        
+
     }
 
 };
