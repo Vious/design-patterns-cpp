@@ -8,6 +8,6 @@ set(CMAKE_BUILD_TYPE "Debug")
 set(CMAKE_CXX_COMPILER /usr/bin/clang++)
 
 
-set(SOURCE_FILES main.cpp)
+set(SOURCE_FILES main.cpp gumball_machine/gumball_machine.cpp)
 
 add_executable(state ${SOURCE_FILES})

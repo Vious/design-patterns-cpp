@@ -2,16 +2,15 @@
 
 #include <iostream>
 #include <memory>
+#include "../gumball_machine/gumball_machine.hpp"
 
 namespace stp {
 
 class GumballMachine;
 
-using ctxPtr = std::shared_ptr<GumballMachine>;
-
 class State {
 public:
-    explicit State(ctxPtr gbMachine) : gumballMachine_(gbMachine) {}
+    explicit State(GumballMachine *gbMachine) : gumballMachine_(gbMachine) {}
 
     virtual void insertQuarter() = 0;
     
@@ -21,8 +20,7 @@ public:
 
     virtual void dispense() = 0;
 
-private:
-    ctxPtr gumballMachine_;
+    GumballMachine *gumballMachine_;
 
 };
 
