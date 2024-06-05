@@ -1,6 +1,10 @@
 # State Pattern
 A simple c++ code for state pattern. The case used here is gumball machine. 
 
+## State Changing Pipeline
+![Image](./imgs/States.png "state pipeline")
+
+
 ## Notes
 There are sevral points that I would like to note down.
 - Avoid circular dependency. (c/c++ is different from Java)
