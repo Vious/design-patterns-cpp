@@ -7,3 +7,4 @@ Basically, the following patterns are composed together.
 - Abstract factory
 - Decorator pattern
 - Adapter pattern
+- Iterator pattern

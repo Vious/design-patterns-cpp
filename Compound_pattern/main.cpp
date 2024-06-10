@@ -10,5 +10,8 @@ int main()
 {
     abstractFactPtr duckFactory = std::make_shared<CountingDuckFactory>();
     simulate(duckFactory);
+
+    simulateWithIterator(duckFactory);
+
     return 0;
 }
